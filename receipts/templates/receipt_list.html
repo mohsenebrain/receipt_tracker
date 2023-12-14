@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Receipts</h1>
+
+  <ul>
+    {% for receipt in receipts %}
+      <li><a href="{% url 'receipt_detail' pk=receipt.pk %}">{{ receipt.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'receipt_new' %}">Add Receipt</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ receipt.name }}</h1>
+  <p>Date of Purchase: {{ receipt.date_purchase }}</p>
+  <p>Item List: {{ receipt.item_list }}</p>
+  <p>Total Amount: {{ receipt.total_amount }}</p>
+
+  <a href="{% url 'receipt_edit' pk=receipt.pk %}">Edit</a>
+  <a href="{% url 'receipt_delete' pk=receipt.pk %}">Delete</a>
+  <a href="{% url 'receipt_list' %}">Back to Receipts</a>
+{% endblock %}
