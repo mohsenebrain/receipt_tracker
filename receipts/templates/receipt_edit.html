@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+<title>{% block title %}Edit Receipt|| My Receipt App{% endblock %}</title>
 
 {% block content %}
   <h1>{% if form.instance.pk %}Edit Receipt{% else %}Add Receipt{% endif %}</h1>
